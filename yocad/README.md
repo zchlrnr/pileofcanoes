@@ -6,8 +6,16 @@
 ## Getting Started
 
   It requires NumPy, SciPy, and matplotlib. To install the required
-  packages, run the command `pip3 install -U -r requirements.txt`
+  packages, run the command 
+  ```
+  pip3 install -U -r requirements.txt
+  ```
   in the top level directory.
+  It may also be helpful to install the following packages for your
+  operating system and then upgrade with pip afterwards.
+  ```
+  apt-get install python-numpy python-scipy python-matplotlib
+  ```
 
   The design of the yoyo is done in four user created files.
 
