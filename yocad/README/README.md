@@ -13,11 +13,19 @@
   4. cup.txt
 
   By downloading all files in the "PythonAttempt" folder and running
-  '''
-  $python3 pythonattempt01.py
-  '''
+    ```
+    $python3 pythonattempt01.py
+    ```
   It should go off without a hitch, and plot the yoyo profile with
-  matplotlib.
+  matplotlib.  If this does not happen, try the following.
+
+    ```
+    $sudo apt-get install pip3
+    $pip3 install numpy
+    $pip3 install scipy
+    $pip3 install matplotlib
+    $python3 pythonattempt01.py
+    ```
 
   Currently, as of 2017.11.09, profile.txt, rim.txt, and cup.txt do not
   actively interface w/ 'specs.txt' or with eachother, however it will
