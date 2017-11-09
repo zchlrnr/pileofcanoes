@@ -13,7 +13,6 @@
   4. cup.txt
 
   By downloading all files in the "PythonAttempt" folder and running
-
   '$python3 pythonattempt01.py'
 
   It should go off without a hitch, and plot the yoyo profile with
