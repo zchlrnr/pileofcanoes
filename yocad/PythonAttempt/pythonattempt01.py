@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.path import Path
 import matplotlib.patches as patches
 from scipy.special import binom
+from Bezier import Bezier
 Bdata = np.loadtxt('BearingSeatCoords_C.txt')
 Sdata = np.genfromtxt('specs.txt', usecols = 0, delimiter = ',', dtype = None)
 Pdata = np.loadtxt('profile.txt',delimiter = ',')
@@ -24,22 +25,6 @@ for i in range(0,len(Pdata)):
 for i in range(0,len(Rdata)):
     x3=np.append(x3,Rdata[i,0])
     y3=np.append(y3,Rdata[i,1])
-#-----THIS IS THE IMPLEMENTATION OF THE BEZIER CURVE SUBROUTINE-------#
-def Bernstein(n, k):
-    #Bernstein polynomial.
-    coeff = binom(n, k)
-    def _bpoly(x):
-        return coeff * x ** k * (1 - x) ** (n - k)
-    return _bpoly
-def Bezier(points, num=200):
-    #Build Bézier curve from points.
-    N = len(points)
-    t = np.linspace(0, 1, num=num)
-    curve = np.zeros((num, 2))
-    for ii in range(N):
-        curve += np.outer(Bernstein(N - 1, ii)(t), points[ii])
-    return curve
-#-----END BEZIER SUBROUTINE-------------------------------------------#
 xp, yp = Bezier(list(zip(x2,y2))).T
 xr, yr = Bezier(list(zip(x3,y3))).T
 plt.plot(xp,yp)
