@@ -11,4 +11,8 @@
 
   4. cup.txt 
 
+  Currently, as of 2017.11.09, 2,3, and 4 do not actively interface w/
+  'specs.txt', however it will (and must) in the future.
 
+  There is only one file which contains bearing seat information, and
+  it is called 'BearingSeatCoords_C.txt'
