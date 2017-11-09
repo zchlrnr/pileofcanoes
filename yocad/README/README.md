@@ -14,14 +14,20 @@
 
   By downloading all files in the "PythonAttempt" folder and running
 
+  '$python3 pythonattempt01.py'
+
+  It should go off without a hitch, and plot the yoyo profile with
+  matplotlib.
 
   Currently, as of 2017.11.09, profile.txt, rim.txt, and cup.txt do not
-  actively interface w/ 'specs.txt', however it will (and must) in the
-  future. There is only one file which contains bearing seat
-  information, and it is called 'BearingSeatCoords_C.txt'.  More of
-  such files for every known letter labeled bearing size will be
-  generated.
+  actively interface w/ 'specs.txt' or with eachother, however it will
+  (and must) in the future. There is only one file which contains
+  bearing seat information, and it is called 'BearingSeatCoords_C.txt'.
+  More of such files for every known letter labeled bearing size will
+  be generated.
 
   A subroutine called Bezier.py is written. It is called to calculate
   exactly 200 points in a bezier spline shape given two lists of
   coordinate pairs (x and y values).
+
+  This code is initially written by Zach Lerner
