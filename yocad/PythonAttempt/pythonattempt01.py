@@ -8,21 +8,22 @@ from scipy.special import binom
 Bdata = np.loadtxt('BearingSeatCoords_C.txt')
 Sdata = np.genfromtxt('specs.txt', usecols = 0, delimiter = ',', dtype = None)
 Pdata = np.loadtxt('profile.txt',delimiter = ',')
-l = len(Bdata) + len(Pdata)
-counter = 0
+Rdata=np.loadtxt('rim.txt',delimiter=',')
 x1=[]
 y1=[]
 x2=[]
 y2=[]
 x3=[]
 y3=[]
-
 for i in range(0,len(Bdata)):
     x1=np.append(x1,Bdata[i,0])
     y1=np.append(y1,Bdata[i,1])
 for i in range(0,len(Pdata)):
     x2=np.append(x2,Pdata[i,0])
     y2=np.append(y2,Pdata[i,1])
+for i in range(0,len(Rdata)):
+    x3=np.append(x3,Rdata[i,0])
+    y3=np.append(y3,Rdata[i,1])
 #-----THIS IS THE IMPLEMENTATION OF THE BEZIER CURVE SUBROUTINE-------#
 def Bernstein(n, k):
     #Bernstein polynomial.
@@ -39,8 +40,11 @@ def Bezier(points, num=200):
         curve += np.outer(Bernstein(N - 1, ii)(t), points[ii])
     return curve
 #-----END BEZIER SUBROUTINE-------------------------------------------#
-x, y = Bezier(list(zip(x2,y2))).T
-plt.plot(x,y)
+xp, yp = Bezier(list(zip(x2,y2))).T
+xr, yr = Bezier(list(zip(x3,y3))).T
+plt.plot(xp,yp)
+plt.plot(xr,yr)
+plt.plot(x1,y1)
 plt.axis('equal')
 plt.plot(x2,y2,"ro")
 plt.plot(x2,y2,"b--")
