@@ -13,9 +13,12 @@
   in the top level directory.
   It may also be helpful to install the following packages for your
   operating system and then upgrade with pip afterwards.
-  ```
-  apt-get install python-numpy python-scipy python-matplotlib
-  ```
+    ```
+    $sudo apt-get install pip3
+    apt-get install python-numpy python-scipy python-matplotlib
+    pip3 install -U -r requirements.txt
+    $python3 pythonattempt01.py
+    ```
 
   The design of the yoyo is done in four user created files.
 
@@ -32,7 +35,8 @@
   $python3 pythonattempt01.py
   ```
   It should go off without a hitch, and plot the yoyo profile with
-  matplotlib.
+  matplotlib.  If this does not happen, try the following.
+
 
   Currently, as of 2017.11.09, profile.txt, rim.txt, and cup.txt do not
   actively interface w/ 'specs.txt' or with eachother, however it will
