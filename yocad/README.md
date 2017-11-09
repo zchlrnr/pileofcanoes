@@ -1,8 +1,26 @@
-# YoCad: A Software For Stubborn Throwers
+# YoCad: Software For Stubborn Throwers
+
   This software is designed to allow anyone to design their yoyo from
-  a rudimentary command line interface. YoCad is written in python 3.
-  It requires NumPy, SciPy, and matplotlib. The design of the yoyo is
-  done in four user created files.
+  a rudimentary command line interface. YoCad is written in Python 3.
+
+## Getting Started
+
+  It requires NumPy, SciPy, and matplotlib. To install the required
+  packages, run the command 
+  ```
+  pip3 install -U -r requirements.txt
+  ```
+  in the top level directory.
+  It may also be helpful to install the following packages for your
+  operating system and then upgrade with pip afterwards.
+    ```
+    $sudo apt-get install pip3
+    apt-get install python-numpy python-scipy python-matplotlib
+    pip3 install -U -r requirements.txt
+    $python3 pythonattempt01.py
+    ```
+
+  The design of the yoyo is done in four user created files.
 
   1. specs.txt
 
@@ -13,9 +31,9 @@
   4. cup.txt
 
   By downloading all files in the "PythonAttempt" folder and running
-    ```
-    $python3 pythonattempt01.py
-    ```
+  ```
+  $python3 pythonattempt01.py
+  ```
   It should go off without a hitch, and plot the yoyo profile with
   matplotlib.  If this does not happen, try the following.
 
@@ -38,4 +56,4 @@
   exactly 200 points in a bezier spline shape given two lists of
   coordinate pairs (x and y values).
 
-  This code is initially written by Zach Lerner
+  This code is initially written by Zach Lerner.
